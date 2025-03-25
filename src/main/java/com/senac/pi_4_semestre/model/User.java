@@ -26,11 +26,6 @@ public class User implements Serializable{
 	private String email;
 	private String phone;
 	private String password;
-    
-    //TODO - mudar o 'String' pelo Oder
-	@JsonIgnore
-	@OneToMany(mappedBy = "client")
-	private List<String> orders = new ArrayList<>();
 	
 	public User() {
 	}
@@ -99,11 +94,6 @@ public class User implements Serializable{
 			return false;
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
-	}
-
-    //TODO - mudar o 'String' pelo Oder
-	public List<String> getOrders() {
-		return orders;
 	}
 	
 }
