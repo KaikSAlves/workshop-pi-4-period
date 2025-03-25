@@ -1,4 +1,4 @@
-package com.senac.pi_4_semestre.model;
+package com.senac.pi_4_semestre.model.enums;
 
 public enum OrderStatus {
 	
