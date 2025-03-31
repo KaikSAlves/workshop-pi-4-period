@@ -5,11 +5,26 @@ import java.time.LocalDateTime;
 
 import com.senac.pi_4_semestre.model.enums.PaymentType;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_payment")
 public class Payment implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private LocalDateTime moment;
+
+    @Enumerated(EnumType.STRING)
     private PaymentType paymentType;
     private boolean paid;
 
