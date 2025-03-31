@@ -1,19 +1,16 @@
 package com.senac.pi_4_semestre.model;
 
 import java.io.Serializable;
-import java.util.Objects;
-
-import org.hibernate.annotations.Collate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
 
 @Entity
-public abstract class Product implements Serializable{
+public class Product implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
