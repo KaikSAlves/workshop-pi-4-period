@@ -5,10 +5,23 @@ import java.time.LocalDateTime;
 import java.util.List;
 import com.senac.pi_4_semestre.model.enums.OrderStatus;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_order")
 public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+
     private List<Product> products;
     private Double totalPrice;
     private LocalDateTime moment;
