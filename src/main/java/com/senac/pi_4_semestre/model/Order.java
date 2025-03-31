@@ -37,7 +37,7 @@ public class Order implements Serializable {
     @Column(nullable = false)
     private Payment payment;
 
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items = new ArrayList<>();
     
     public Order() {
